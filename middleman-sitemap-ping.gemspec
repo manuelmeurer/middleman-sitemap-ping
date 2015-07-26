@@ -11,9 +11,9 @@ Gem::Specification.new do |gem|
   gem.platform      = Gem::Platform::RUBY
   gem.author        = 'Manuel Meurer'
   gem.email         = 'manuel@krautcomputing.com'
-  gem.summary       = 'Middleman extension to ping search engines with a sitemap'
-  gem.description   = 'Middleman extension to ping search engines with a sitemap'
-  gem.homepage      = 'http://bootstrap-ruby.github.io/middleman-sitemap-ping'
+  gem.summary       = 'Middleman extension to ping search engines (Google and Bing) with a sitemap URL'
+  gem.description   = 'Middleman extension to ping search engines (Google and Bing) with a sitemap URL'
+  gem.homepage      = 'http://krautcomputing.github.io/middleman-sitemap-ping/'
   gem.license       = 'MIT'
 
   gem.files         = `git ls-files`.split($/)

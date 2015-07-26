@@ -5,7 +5,7 @@
 [![Dependency Status](https://gemnasium.com/bootstrap-ruby/middleman-sitemap-ping.png)](https://gemnasium.com/bootstrap-ruby/middleman-sitemap-ping)
 [![Code Climate](https://codeclimate.com/github/bootstrap-ruby/middleman-sitemap-ping.png)](https://codeclimate.com/github/bootstrap-ruby/middleman-sitemap-ping)
 
-[Middleman](https://middlemanapp.com/) extension to ping search engines (Google and Bing) with a sitemap URL.
+[Middleman](https://middlemanapp.com/) extension to ping search engines (Google and Bing) with a sitemap URL
 
 ## Installation
 

@@ -22,20 +22,18 @@ Or install it yourself as:
 
 ## Usage
 
-### Activate extension
-
 Activate the extensions in `config.rb` in your Middleman app:
 
 ```ruby
 activate :sitemap_ping do |config|
-  config.host         = 'http://www.mywebsite.com'  # The host of your website      (required)
-  config.sitemap_file = 'custom-sitemap-file.xml'   # The name of your sitemap file (optional, default: sitemap.xml)
-  config.ping_google  = false                       # Ping Google?                  (optional, default: true)
-  config.ping_bing    = false                       # Ping Bing?                    (optional, default: true)
+  config.host         = 'http://www.mywebsite.com' # (required)                       Host of your website
+  config.sitemap_file = 'custom-sitemap-file.xml'  # (optional, default: sitemap.xml) Name of your sitemap file
+  config.ping_google  = false                      # (optional, default: true)        Ping Google?
+  config.ping_bing    = false                      # (optional, default: true)        Ping Bing?
 end
 ```
 
-Once the extension is activated, it will ping the search engines automatically every time your site is built.
+Once the extension is activated, it will ping the search engines automatically every time you build your site.
 
 ## Contributing
 

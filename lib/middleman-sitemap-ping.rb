@@ -3,8 +3,8 @@ require 'middleman-core'
 module Middleman
   class SitemapPing < Extension
     SERVICES = {
-      google: 'http://www.google.com/webmasters/tools/ping?sitemap=SITEMAP_URL',
-      bing:   'http://www.bing.com/ping?sitemap=SITEMAP_URL'
+      google: 'http://www.google.com/webmasters/tools/ping?sitemap=%SITEMAP_URL%',
+      bing:   'http://www.bing.com/ping?sitemap=%SITEMAP_URL%'
     }
 
     SERVICES.each_key do |service|
@@ -25,7 +25,7 @@ module Middleman
       sitemap_url = File.join(host, options.sitemap_file)
       SERVICES.each do |service, url|
         next unless options.send("ping_#{service}")
-        url.sub! /SITEMAP_URL\z/, CGI.escape(sitemap_url)
+        url.sub! /%SITEMAP_URL%\z/, CGI.escape(sitemap_url)
         builder.say "Pinging #{url}"
         open url do |f|
           if f.status[0] == '200'

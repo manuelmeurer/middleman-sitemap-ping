@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Middleman-sitemap-ping by krautcomputing</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Middleman-sitemap-ping</h1>
+        <p>Middleman extension to ping search engines (Google and Bing) with a sitemap URL</p>
+
+        <p class="view"><a href="https://github.com/krautcomputing/middleman-sitemap-ping">View the Project on GitHub <small>krautcomputing/middleman-sitemap-ping</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/krautcomputing/middleman-sitemap-ping/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/krautcomputing/middleman-sitemap-ping/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/krautcomputing/middleman-sitemap-ping">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="middleman-sitemap-ping" class="anchor" href="#middleman-sitemap-ping" aria-hidden="true"><span class="octicon octicon-link"></span></a>Middleman Sitemap Ping</h1>
+
+<p><a href="http://badge.fury.io/rb/middleman-sitemap-ping"><img src="https://badge.fury.io/rb/middleman-sitemap-ping.png" alt="Gem Version"></a>
+<a href="http://travis-ci.org/bootstrap-ruby/middleman-sitemap-ping"><img src="https://secure.travis-ci.org/bootstrap-ruby/middleman-sitemap-ping.png" alt="Build Status"></a>
+<a href="https://gemnasium.com/bootstrap-ruby/middleman-sitemap-ping"><img src="https://gemnasium.com/bootstrap-ruby/middleman-sitemap-ping.png" alt="Dependency Status"></a>
+<a href="https://codeclimate.com/github/bootstrap-ruby/middleman-sitemap-ping"><img src="https://codeclimate.com/github/bootstrap-ruby/middleman-sitemap-ping.png" alt="Code Climate"></a></p>
+
+<p><a href="https://middlemanapp.com/">Middleman</a> extension to ping search engines (Google and Bing) with a sitemap URL</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code>gem 'middleman-sitemap-ping'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install middleman-sitemap-ping
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a id="activate-extension" class="anchor" href="#activate-extension" aria-hidden="true"><span class="octicon octicon-link"></span></a>Activate extension</h3>
+
+<p>Activate the extensions in <code>config.rb</code> in your Middleman app:</p>
+
+<div class="highlight highlight-ruby"><pre>activate <span class="pl-c1">:sitemap_ping</span> <span class="pl-k">do </span>|<span class="pl-smi">config</span>|
+  config.host         <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>http://www.mywebsite.com<span class="pl-pds">'</span></span>  <span class="pl-c"># The host of your website      (required)</span>
+  config.sitemap_file <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>custom-sitemap-file.xml<span class="pl-pds">'</span></span>   <span class="pl-c"># The name of your sitemap file (optional, default: sitemap.xml)</span>
+  config.ping_google  <span class="pl-k">=</span> <span class="pl-c1">false</span>                       <span class="pl-c"># Ping Google?                  (optional, default: true)</span>
+  config.ping_bing    <span class="pl-k">=</span> <span class="pl-c1">false</span>                       <span class="pl-c"># Ping Bing?                    (optional, default: true)</span>
+<span class="pl-k">end</span></pre></div>
+
+<p>Once the extension is activated, it will ping the search engines automatically every time your site is built.</p>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create new Pull Request</li>
+</ol>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/krautcomputing">krautcomputing</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

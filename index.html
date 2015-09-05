@@ -68,7 +68,12 @@
   config.after_build  <span class="pl-k">=</span> <span class="pl-c1">false</span>                      <span class="pl-c"># (optional, default: true)        Run automatically after build?</span>
 <span class="pl-k">end</span></pre></div>
 
-<p>Once the extension is activated, it will ping the search engines automatically every time you build your site.</p>
+<p>Once the extension is activated, it will ping the search engines automatically every time you build your site (unless you set <code>config.after_build = false</code>).</p>
+
+<p>You can also execute the ping from the command line:</p>
+
+<pre><code>bundle exec middleman sitemap_ping
+</code></pre>
 
 <h2>
 <a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>

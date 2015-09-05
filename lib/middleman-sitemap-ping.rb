@@ -10,6 +10,7 @@ module Middleman
     SERVICES.each_key do |service|
       option "ping_#{service}".to_sym, true, "Ping #{service.capitalize}?"
     end
+    option :after_build,  true,          'Execute automatically after the site was built?'
     option :host,         nil,           'The host of your website'
     option :sitemap_file, 'sitemap.xml', 'The name of your sitemap file'
 
@@ -20,6 +21,7 @@ module Middleman
     end
 
     def after_build(builder)
+      return unless options.after_build
       raise 'Please set the `host` option for the sitemap ping extension!' unless host = options.host
       host = "http://#{host}" unless host =~ %r(\Ahttps?://)
       sitemap_url = File.join(host, options.sitemap_file)

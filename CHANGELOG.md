@@ -1,3 +1,7 @@
+## 0.1.0
+
+* Added the after_build option (defaults to true)
+
 ## 0.0.2
 
 * Updated gemspec

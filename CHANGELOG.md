@@ -1,3 +1,7 @@
+## 0.2.0
+
+* Added CLI command
+
 ## 0.1.0
 
 * Added the after_build option (defaults to true)

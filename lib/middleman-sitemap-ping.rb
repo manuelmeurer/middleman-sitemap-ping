@@ -21,7 +21,12 @@ module Middleman
     end
 
     def after_build(builder)
-      return unless options.after_build
+      if options.after_build
+        self.do_ping builder
+      end
+    end
+
+    def do_ping(builder)
       raise 'Please set the `host` option for the sitemap ping extension!' unless host = options.host
       host = "http://#{host}" unless host =~ %r(\Ahttps?://)
       sitemap_url = File.join(host, options.sitemap_file)
@@ -41,6 +46,7 @@ module Middleman
   end
 end
 
+require_relative 'middleman-sitemap-ping/command'
 require_relative 'middleman-sitemap-ping/version'
 
 Middleman::SitemapPing.register :sitemap_ping

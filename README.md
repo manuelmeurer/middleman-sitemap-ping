@@ -34,7 +34,13 @@ activate :sitemap_ping do |config|
 end
 ```
 
-Once the extension is activated, it will ping the search engines automatically every time you build your site.
+Once the extension is activated, it will ping the search engines automatically every time you build your site (unless you set `config.after_build = false`).
+
+You can also execute the ping from the command line:
+
+```
+bundle exec middleman sitemap_ping
+```
 
 ## Contributing
 

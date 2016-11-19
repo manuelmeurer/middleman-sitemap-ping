@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Updated code to work with Middleman 4
 
+### Added
+- Added Travis CI badge to Readme
+
+### Removed
+- Removed Rake as development dependency and empty Rakefile
+
 ## [0.2.0] - 2015-09-05
 ### Added
 * Added CLI command

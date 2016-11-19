@@ -1,8 +1,8 @@
-require 'middleman-core/cli'
+require 'middleman-cli'
 
 module Middleman
   module Cli
-    class SitemapPing < Thor
+    class SitemapPing < Thor::Group
       include Thor::Actions
 
       check_unknown_options!
@@ -13,10 +13,14 @@ module Middleman
         true
       end
 
-      desc 'sitemap_ping', 'Ping sitemaps'
       def sitemap_ping
-        Middleman::Application.server.inst.extensions[:sitemap_ping].do_ping self
+        app = Middleman::Application.new do
+          config[:mode] = :build
+        end
+        app.extensions[:sitemap_ping].do_ping self
       end
+
+      Base.register self, 'sitemap_ping', 'sitemap_ping [options]', 'Ping sitemaps'
     end
   end
 end

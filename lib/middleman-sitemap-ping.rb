@@ -14,19 +14,13 @@ module Middleman
     option :host,         nil,           'The host of your website'
     option :sitemap_file, 'sitemap.xml', 'The name of your sitemap file'
 
-    def initialize(app, options_hash = {})
-      super
-
-      require 'open-uri'
-    end
-
     def after_build(builder)
       if options.after_build
-        self.do_ping builder
+        do_ping builder.thor
       end
     end
 
-    def do_ping(builder)
+    def do_ping(thor)
       raise 'Please set the `host` option for the sitemap ping extension!' unless host = options.host
       require 'open-uri'
       host = "http://#{host}" unless host =~ %r(\Ahttps?://)
@@ -34,12 +28,12 @@ module Middleman
       SERVICES.each do |service, url|
         next unless options.send("ping_#{service}")
         url.sub! /%SITEMAP_URL%\z/, CGI.escape(sitemap_url)
-        builder.say "Pinging #{url}"
+        thor.say "Pinging #{url}"
         open url do |f|
           if f.status[0] == '200'
-            builder.say_status :success, 'SUCCESS!', :green
+            thor.say_status :success, 'SUCCESS!', :green
           else
-            builder.say_status :error, "ERROR: #{f.status[0]}", :red
+            thor.say_status :error, "ERROR: #{f.status[0]}", :red
           end
         end
       end
@@ -50,4 +44,4 @@ end
 require_relative 'middleman-sitemap-ping/command'
 require_relative 'middleman-sitemap-ping/version'
 
-Middleman::SitemapPing.register :sitemap_ping
+Middleman::Extensions.register :sitemap_ping, Middleman::SitemapPing

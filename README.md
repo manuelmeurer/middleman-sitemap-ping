@@ -21,6 +21,10 @@ Or install it yourself as:
 
     $ gem install middleman-sitemap-ping
 
+## Versions
+
+Use version 1.x of this gem for Middleman 4 or 0.x for Middleman 3.
+
 ## Usage
 
 Activate the extensions in `config.rb` in your Middleman app:

@@ -28,6 +28,7 @@ module Middleman
 
     def do_ping(builder)
       raise 'Please set the `host` option for the sitemap ping extension!' unless host = options.host
+      require 'open-uri'
       host = "http://#{host}" unless host =~ %r(\Ahttps?://)
       sitemap_url = File.join(host, options.sitemap_file)
       SERVICES.each do |service, url|

@@ -2,7 +2,6 @@
 
 [![Gem Version](https://badge.fury.io/rb/middleman-sitemap-ping.png)](http://badge.fury.io/rb/middleman-sitemap-ping)
 [![Build Status](https://secure.travis-ci.org/bootstrap-ruby/middleman-bootstrap-navbar.png)](https://travis-ci.org/krautcomputing/middleman-sitemap-ping)
-[![Dependency Status](https://gemnasium.com/krautcomputing/middleman-sitemap-ping.png)](https://gemnasium.com/krautcomputing/middleman-sitemap-ping)
 [![Code Climate](https://codeclimate.com/github/krautcomputing/middleman-sitemap-ping.png)](https://codeclimate.com/github/krautcomputing/middleman-sitemap-ping)
 
 [Middleman](https://middlemanapp.com/) extension to ping search engines (Google and Bing) with a sitemap URL

@@ -4,8 +4,8 @@ module Middleman
   module SitemapPing
     class Extension < Middleman::Extension
       SERVICES = {
-        google: 'http://www.google.com/webmasters/tools/ping?sitemap=%SITEMAP_URL%',
-        bing:   'http://www.bing.com/ping?sitemap=%SITEMAP_URL%'
+        google: 'https://www.google.com/webmasters/tools/ping?sitemap=%SITEMAP_URL%',
+        bing:   'https://bing.com/webmaster/ping.aspx?sitemap=%SITEMAP_URL%'
       }
 
       SERVICES.each_key do |service|
